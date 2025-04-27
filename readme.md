@@ -1,263 +1,59 @@
-# Fork说明
-
-本项目是从 [LC044/WeChatMsg](https://github.com/LC044/WeChatMsg) 项目的某个未做改动的fork仓库中fork而来，**仅供个人学习和使用**，不用于任何商业目的。在原项目的基础上，我主要做了以下修改：
-
-- 去除了官网的API，A聊天采用硅基流动的API。
-- 添加了AI读取聊天记录作为知识库或前置知识的功能
-- 优化了AI聊天功能，支持导入全部聊天记录
-- 改进了大量聊天记录的处理方式，解决了token长度超限问题
-- AI聊天处添加了更友好的错误处理机制
-
-这些修改使AI能够更好地理解和利用聊天历史，提供更加个性化的回复。本项目的所有修改均遵循原项目的开源协议，如有侵权请联系删除。
-
-以下内容为fork仓库时，原readme.md文件的内容。
-
----
-
-## [留下你对2024年度聊天报告的期待](https://github.com/LC044/WeChatMsg/issues/532)
-
-<h1 align="center">我的数据我做主</h1>
-<div align="center">
-    <a href="https://github.com/LC044/WeChatMsg/stargazers">
-        <img src="https://img.shields.io/github/stars/LC044/WeChatMsg.svg" />
-    </a>
-    <a href="https://memotrace.cn/" target="_blank">
-        <img alt="GitHub forks" src="https://img.shields.io/github/forks/LC044/WeChatMsg?color=eb6ea5">
-    </a>
-    <a href="https://memotrace.cn/" target="_blank">
-        <img src="https://img.shields.io/badge/WeChat-留痕-blue.svg">
-    </a>
-    <a target="_blank" href="https://memotrace.cn/">
-        <img alt="Hits" src="https://hits.b3log.org/LC044/memotrace.svg">
-    </a>
-    <a href="https://memotrace.cn/" target="_blank">
-        <img src="https://img.shields.io/github/license/LC044/WeChatMsg" />
-    </a>
-    <a href="https://github.com/LC044/WeChatMsg/releases" target="_blank">
-        <img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/LC044/WeChatMsg">
-    </a>
-    <a href="https://memotrace.cn/" target="_blank">
-        <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LC044/WeChatMsg/total?color=3eb370">
-    </a>
-</div>
+# WeChatMsg - 微信聊天记录导出与AI分析工具
 
 <div align="center">
-    <a href="https://memotrace.cn/"><img src="https://memotrace.cn/img/logo%20-%20%E5%89%AF%E6%9C%AC.png" height="240"/></a>
+    <img src="./doc/images/logo.png" height="120"/>
+    <h3>我的数据我做主</h3>
 </div>
 
-<blockquote>
-<div style="background-color: #eaf7ea; border-radius: 10px; padding: 20px; position: relative;">
-  <div style="position: relative;">
-    <div style="position: absolute;top: 0;bottom: 0;left: 0;width: 2px;background-color: #000000;"></div>
-    <h2>前言</h2>
-    <div style="text-indent: 2em;">
-        <a align="center" href="https://memotrace.cn/"><img src="./doc/images/logo3.0.png"/></a>
-        <p style="text-indent:2em;">我深信有意义的不是微信，而是隐藏在对话框背后的一个个<strong>深刻故事</strong>。未来，每个人都能拥有AI的陪伴，而你的数据能够赋予它有关于你过去的珍贵记忆。我希望每个人都有将自己的生活痕迹👨‍👩‍👦👚🥗🏠️🚴🧋⛹️🛌🛀留存的权利，而不是遗忘💀。</p>
-        <p style="text-indent:2em;">AI的发展不仅仅是技术的提升，更是情感💞的延续。每一个对话、每一个互动都是生活中独一无二的片段，是真实而动人的情感交流。因此，我希望AI工作者们能够<strong>善用这些自己的数据</strong>，用于培训独特的、属于个体的人工智能。让<strong>个人AI成为生活中的朋友</strong>，能够理解、记录并分享我们的欢笑、泪水和成长。</p>
-        <p style="text-indent:2em;">那天，AI不再是高不可攀的存在，而是融入寻常百姓家的一部分。因为<strong>每个人能拥有自己的AI</strong>，将科技的力量融入生活的方方面面。这是一场关于真情实感的革命，一场让技术变得更加人性化的探索，让我们共同见证未来的美好。</p>
-        <p align="center"><strong>所以《留痕》</strong></p>
-    </div>
-  </div>
-</div>
-</blockquote>
+本项目是从 [quantumopticss/WeChatMsg](https://github.com/quantumopticss/WeChatMsg) ([LC044/WeChatMsg](https://github.com/LC044/WeChatMsg)项目fork而来)项目fork而来，**仅供个人学习和使用**，不用于任何商业目的。在原项目的基础上进行了多项增强，特别是AI聊天功能的改进。
 
-## 🍉功能
-- [![](https://img.shields.io/badge/MemoTrace-官网-blue)](https://memotrace.cn/)
-[![](https://img.shields.io/badge/GitHub-black.svg)](https://github.com/LC044/WeChatMsg)
-[![](https://img.shields.io/badge/Gitee-red.svg)](https://gitee.com/lc044/WeChatMsg)
-[![](https://img.shields.io/badge/Download-yellow.svg)](https://memotrace.cn/)
-- 🔒️🔑🔓️Windows本地微信数据库
-- 还原微信聊天界面
-    - 🗨文本✅
-    - 🏝图片✅
-    - 拍一拍等系统消息✅
-- 导出数据
-  - 批量导出数据✅
-  - 导出联系人✅
-  - sqlite数据库✅
-  - HTML✅
-    - 文本、图片、视频、表情包、语音、文件、分享链接、系统消息、引用消息、合并转发的聊天记录、转账、音视频通话、位置分享、名片、小程序、视频号
-    - 支持时间轴跳转
-    - 引用消息可定位到原文
-    - 分享链接、小程序支持超链接跳转
-    - 合并转发的聊天记录支持展开
-  - CSV文档✅
-  - TXT文档✅
-  - Word文档✅
-- 分析聊天数据，做成[可视化年报](https://memotrace.cn/demo.html)
+## 🚀 主要特点
 
-## 2024年度报告
+- **硅基流动API集成**：替换了原有API，使用硅基流动API进行AI聊天，支持更多高质量模型
+- **聊天记录知识库**：AI可读取并利用微信聊天记录作为知识库或前置知识
+- **全量聊天记录支持**：优化了导入机制，支持导入大量甚至全部聊天记录
+- **智能采样处理**：自动处理大量聊天记录，保留最近500条完整记录，对更早的记录进行智能采样
+- **Token限制优化**：解决了token长度超限问题，自动调整聊天记录量以适应不同模型
+- **友好的错误处理**：添加了详细的错误提示和处理机制，提高用户体验
+- **可配置的API设置**：支持在运行时修改API密钥、模型选择和参数设置
 
-### 预览
+## 💡 增强的AI聊天功能
 
-[个人年度报告在线预览](https://memotrace.cn/2024/single/)
+- **模型选择**：支持多种大型语言模型，包括GLM、Qwen、Baichuan、Yi、InternLM、Llama、Mistral、Claude和GPT系列
+- **聊天记录参数设置**：可自定义最大消息数、最大Token数和每条消息估计Token数
+- **模型Token限制配置**：提供界面管理不同模型的Token限制，支持添加自定义模型
+- **智能聊天记录处理**：根据模型容量自动调整聊天记录的处理方式，确保不超出模型限制
+- **上下文保持**：保留对话历史，使AI能够理解对话上下文
 
-[双人年度报告在线预览](https://memotrace.cn/2024Report/)
+## 🔧 原项目保留功能
 
-手机可以扫码观看
+- **微信数据库解密**：支持解密Windows本地微信数据库
+- **聊天界面还原**：还原微信聊天界面，支持文本、图片、系统消息等
+- **数据导出**：支持导出为HTML、CSV、TXT、Word等多种格式
+- **聊天数据分析**：可视化分析聊天数据，生成年度报告
 
-<img src="/doc/images/qrcode0.png" height="300px"/>
+## 📋 使用方法
 
-![](/doc/images/demo1.gif)
+1. 下载并运行程序
+2. 点击"API设置"按钮配置硅基流动API密钥和模型
+3. 点击"聊天记录参数"按钮配置聊天记录处理参数
+4. 点击"模型Token限制"按钮配置或查看模型的token限制
+5. 点击"聊天记录"按钮选择联系人和是否使用聊天记录作为知识库
+6. 开始与AI聊天，享受个性化的对话体验
 
-### 源码地址
+## ⚠️ 注意事项
 
-[https://github.com/LC044/AnnualReport](https://github.com/LC044/AnnualReport)
+- 本项目仅供个人学习和使用，不用于任何商业目的
+- 使用聊天记录作为知识库时，请注意保护个人隐私
+- 选择"全部"聊天记录时可能因记录过多导致错误，建议适当限制数量
+- 所有修改均遵循原项目的开源协议(GPLv3)
 
-## 2.2更新预告
+## 🙏 致谢
 
-### 全面适配微信4.0
+- 原项目：[LC044/WeChatMsg](https://github.com/LC044/WeChatMsg)、[quantumopticss/WeChatMsg](https://github.com/quantumopticss/WeChatMsg)
+- 硅基流动API：[Silicon Flow](https://siliconflow.cn/)
 
-![](/doc/images/数据库架构设计图.png)
-
-  * 全新框架、重构底层逻辑
-  * 更低的内存占用
-  * 更快的导出速度
-
-### 全新的Ui
-  * 更简洁
-  * 更流畅
-  * 更友好
-  * 前后端彻底分离
-
-### 更宽松的许可证
-
-  - 如果跟其他模块兼容的话，将采用MIT许可证
-  - 已有功能代码全开源
-
-## 🥤效果
-
-<details>
-
-<img alt="聊天界面" src="./doc/images/chat.png"/>
-
-![](./doc/images/微信图片_20240130214341.jpg)
-
-![](./doc/images/why.gif)
-
-![](./doc/images/病假.gif)
-
-![image-20230520235351749](./doc/images/20231227211149.png)
-
-![image-20230520235351749](./doc/images/20231227211215.png)
-
-![image-20230520235351749](./doc/images/20231227211228.png)
-
-![image-20230520235400772](./doc/images/20231227211240.png)
-
-![image-20230520235409112](./doc/images/20231227211250.png)
-
-![image-20230520235422128](./doc/images/image-20230520235338305.png)
-
-![image-20230520235431091](./doc/images/image-20230520235351749.png)
-
-</details>
-
-# ⌛使用
-
-下载地址：[https://memotrace.cn/](https://memotrace.cn/)
-
-下载打包好的exe可执行文件，双击即可运行
-
-**⚠️注意：若出现闪退情况请右击选择用管理员身份运行exe程序，该程序不存在任何病毒，若杀毒软件提示有风险选择略过即可，key为none可重启电脑**
-
-## 源码运行
-
-[详见开发者手册](./doc/开发者手册.md)
-
-[AI聊天](./MemoAI/readme.md)
-
-## PC端使用过程中部分问题解决（可参考）
-
-#### 🤔如果您在pc端使用的时候出现问题，可以先参考以下方面，如果仍未解决，可以在群里交流~
-
-* 不支持Win7
-* 不支持Mac(未来或许会实现)
-* 遇到问题四大法宝
-  * 首先要删除app/Database/Msg文件夹
-  * 重启微信
-  * 重启exe程序
-  * 重启电脑
-  * 换电脑
-如果您在运行可执行程序的时候出现闪退的现象，请右击软件使用管理员权限运行。
-
-[查看详细教程](https://memotrace.cn/doc/)
-
-# 🏆致谢
-
-<details>
-
-* PC微信工具:[https://github.com/xaoyaoo/PyWxDump](https://github.com/xaoyaoo/PyWxDump)
-* PyQt组件库:[https://github.com/PyQt5/CustomWidgets](https://github.com/PyQt5/CustomWidgets)
-* 得力小助手:[ChatGPT](https://chat.openai.com/)
-
-</details>
-
----
-> \[!IMPORTANT]
->
-> 声明：该项目有且仅有一个目的：“留痕”——我的数据我做主，前提是“我的数据”其次才是“我做主”，禁止任何人以任何形式将其用于任何非法用途，对于使用该程序所造成的任何后果，所有创作者不承担任何责任🙄<br>
-> 该软件不能找回删除的聊天记录，任何企图篡改微信聊天数据的想法都是无稽之谈。<br>
-> 本项目所有功能均建立在”前言“的基础之上，基于该项目的所有开发者均不能接受任何有悖于”前言“的功能需求，违者后果自负。<br>
-> 如果该项目侵犯了您或您产品的任何权益，请联系我删除<br>
-> 软件贩子勿扰，违规违法勿扰，二次开发请务必遵守开源协议
-
-[![Star History Chart](https://api.star-history.com/svg?repos=LC044/WeChatMsg&type=Date)](https://star-history.com/?utm_source=bestxtools.com#LC044/WeChatMsg&Date)
-
-# 🤝贡献者
-
-<a href="https://github.com/lc044/wechatmsg/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=lc044/wechatmsg" />
-</a>
-
-## 赞助者名单
-
-感谢以下赞助者的慷慨支持：
-
-- [STDquantum](https://github.com/STDquantum)
-- [xuanli](https://github.com/xuanli)
-- [无名路人](https://github.com/wumingluren)
-- [时鹏亮](https://shipengliang.com)
-
-# 🎄温馨提示
-
-如果您在使用该软件的过程中
-
-* 发现新的bug
-* 有新的功能诉求
-* 操作比较繁琐
-* 觉得UI不够美观
-* 等其他给您造成困扰的地方
-
-请提起[issue](https://github.com/LC044/WeChatMsg/issues)，我将尽快为您解决问题
-
-如果您是一名开发者，有新的想法或建议，欢迎[fork](https://github.com/LC044/WeChatMsg/forks)
-该项目并发起[PR](https://github.com/LC044/WeChatMsg/pulls)，我将把您的名字写入贡献者名单中
-
-# 联系方式
-
-如果您遇到了问题，可以添加QQ群寻求帮助，由于精力有限，不能回答所有问题，所以还请您仔细阅读文档之后再考虑是否入群
-
-## 加群方式
-
-1. 关注官方公众号，回复：联系方式
-2. QQ扫码入群
-
-后续更新将会在公众号同步发布
-<div>
-  <img src="https://blog.lc044.love/static/img/b8df8c594a4cabaa0a62025767a3cfd9.weixin.webp">
-  <img src="./doc/images/qq3.jpg" height="200">
-</div>
-
-## AI交流
-
-欢迎对“前言”中AI感兴趣的加入QQ群（不负责任何答疑），让我们一起探讨新技术，钻研新方案，将科技的力量融入生活，打造出一个真正具有情感的个人AI
-
-<div>
-  <img src="doc/images/ai_qq.jpg" height="200">
-</div>
-
-# License
+## License
 
 WeChatMsg is licensed under [GPLv3](./LICENSE).
 
