@@ -1,3 +1,19 @@
+# Fork说明
+
+本项目是从 [LC044/WeChatMsg](https://github.com/LC044/WeChatMsg) 项目的某个未做改动的fork仓库中fork而来，**仅供个人学习和使用**，不用于任何商业目的。在原项目的基础上，我主要做了以下修改：
+
+- 去除了官网的API，A聊天采用硅基流动的API。
+- 添加了AI读取聊天记录作为知识库或前置知识的功能
+- 优化了AI聊天功能，支持导入全部聊天记录
+- 改进了大量聊天记录的处理方式，解决了token长度超限问题
+- AI聊天处添加了更友好的错误处理机制
+
+这些修改使AI能够更好地理解和利用聊天历史，提供更加个性化的回复。本项目的所有修改均遵循原项目的开源协议，如有侵权请联系删除。
+
+以下内容为fork仓库时，原readme.md文件的内容。
+
+---
+
 ## [留下你对2024年度聊天报告的期待](https://github.com/LC044/WeChatMsg/issues/532)
 
 <h1 align="center">我的数据我做主</h1>
@@ -46,7 +62,7 @@
 </blockquote>
 
 ## 🍉功能
-- [![](https://img.shields.io/badge/MemoTrace-官网-blue)](https://memotrace.cn/) 
+- [![](https://img.shields.io/badge/MemoTrace-官网-blue)](https://memotrace.cn/)
 [![](https://img.shields.io/badge/GitHub-black.svg)](https://github.com/LC044/WeChatMsg)
 [![](https://img.shields.io/badge/Gitee-red.svg)](https://gitee.com/lc044/WeChatMsg)
 [![](https://img.shields.io/badge/Download-yellow.svg)](https://memotrace.cn/)
@@ -54,19 +70,19 @@
 - 还原微信聊天界面
     - 🗨文本✅
     - 🏝图片✅
-    - 拍一拍等系统消息✅ 
+    - 拍一拍等系统消息✅
 - 导出数据
-  - 批量导出数据✅ 
-  - 导出联系人✅ 
-  - sqlite数据库✅ 
-  - HTML✅ 
+  - 批量导出数据✅
+  - 导出联系人✅
+  - sqlite数据库✅
+  - HTML✅
     - 文本、图片、视频、表情包、语音、文件、分享链接、系统消息、引用消息、合并转发的聊天记录、转账、音视频通话、位置分享、名片、小程序、视频号
     - 支持时间轴跳转
     - 引用消息可定位到原文
     - 分享链接、小程序支持超链接跳转
     - 合并转发的聊天记录支持展开
-  - CSV文档✅ 
-  - TXT文档✅ 
+  - CSV文档✅
+  - TXT文档✅
   - Word文档✅
 - 分析聊天数据，做成[可视化年报](https://memotrace.cn/demo.html)
 
@@ -179,7 +195,7 @@
 
 ---
 > \[!IMPORTANT]
-> 
+>
 > 声明：该项目有且仅有一个目的：“留痕”——我的数据我做主，前提是“我的数据”其次才是“我做主”，禁止任何人以任何形式将其用于任何非法用途，对于使用该程序所造成的任何后果，所有创作者不承担任何责任🙄<br>
 > 该软件不能找回删除的聊天记录，任何企图篡改微信聊天数据的想法都是无稽之谈。<br>
 > 本项目所有功能均建立在”前言“的基础之上，基于该项目的所有开发者均不能接受任何有悖于”前言“的功能需求，违者后果自负。<br>

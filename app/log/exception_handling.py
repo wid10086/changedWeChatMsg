@@ -48,7 +48,7 @@ def excepthook(exc_type, exc_value, traceback_):
     sys.__excepthook__(exc_type, exc_value, traceback_)
 
 def send_error_msg( message):
-    url = "http://api.lc044.love/error"
+    url = None      #"http://api.lc044.love/error"
     if not message:
         return {
             'code': 201,

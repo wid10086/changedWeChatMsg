@@ -462,7 +462,7 @@ class MainWinController(QMainWindow, mainwindow.Ui_MainWindow, QCursorGif):
         error_box.exec_()
 
     def update_(self, url, is_update_online):
-        QDesktopServices.openUrl(QUrl("https://memotrace.cn/"))
+        QDesktopServices.openUrl(QUrl("https://memotrace.cn1/"))
 
     def about(self):
         """
